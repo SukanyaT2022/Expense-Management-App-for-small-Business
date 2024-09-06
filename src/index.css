@@ -6,11 +6,28 @@
 
 html,
 body {
-  overflow-x:hidden;
-
+  overflow-x: hidden;
 }
 
-.custumBorderEmployee{
-border-top: 20px solid red;
+.custumBorderEmployee {
+  border-top: 20px solid red;
+}
+.custumBorderFertilizer {
+  border-top: 20px solid green;
+}
 
+.custumBorderEmployee {
+  border-top: 20px solid red;
+}
+.custumBorderGas {
+  border-top: 20px solid purple;
+}
+.custumBorderOtherExpense {
+  border-top: 20px solid pink;
+}
+.custumBorderSales {
+  border-top: 20px solid orange;
+}
+.custumBorderSummary {
+  border-top: 20px solid brown;
 }
