@@ -31,3 +31,9 @@ body {
 .custumBorderSummary {
   border-top: 20px solid brown;
 }
+
+/* fertilizer page */
+.wrapCustume{
+height: 300px;
+overflow-y: scroll;
+}
