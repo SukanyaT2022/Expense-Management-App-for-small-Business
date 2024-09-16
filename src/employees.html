@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="index.css">
     
-    <title>Home Page</title>
+    <title>Employee Page</title>
 </head>
 <body>
     <div class="wrappper">
@@ -97,8 +97,8 @@
      <!-- end side bar -->
 
      <!-- start main page 4 box -->
-     <div class="p-4 sm:ml-64 ">
-      <h2 class="text-xl font-semibold py-8">Employees Expense</h2>
+     <div class="sm:ml-64 ">
+      <h2 class="py-10 font-bold px-2 md:text-xl text-[16px]">Employees Expense</h2>
       <!-- control main box -->
         <div class="p-8 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
          <!-- control main of 3 small boxes -->
@@ -107,7 +107,7 @@
               <div class="flex flex-col items-center justify-center rounded bg-gray-50 md:h-56 h-48 custumBorderEmployee ">
                  <p class="text-2xl text-gray-400 flex  lg:flex-row md:flex-col flex-col items-center space-y-2 ">
                     <i class="fa-solid fa-user"></i>
-                  <span class="flex-1 ms-3 whitespace-nowrap">Last year</span>
+                  <span class="flex-1 md:ms-3 ms-0 whitespace-nowrap">Last year</span>
                  </p>
                  <div class="pt-5 "><p>$10000</p></div>
               </div>
@@ -115,14 +115,14 @@
               <div class="flex flex-col items-center justify-center md:h-56 h-48  rounded bg-gray-50 dark:bg-gray-800 custumBorderFertilizer">
                <p class="text-2xl text-gray-400 flex lg:flex-row flex-col items-center space-y-2 ">
                 <i class="fa-solid fa-user"></i>
-                  <span class="flex-1 ms-3 whitespace-nowrap">3 months</span>
+                  <span class="flex-1 md:ms-3 ms-0 whitespace-nowrap">3 months</span>
                   <div class="pt-5"><p>$10000</p></div>
                  </p>
               </div>
               <div class="flex flex-col items-center justify-center md:h-56 h-48  rounded bg-gray-50 dark:bg-gray-800 custumBorderGas">
                <p class="text-2xl text-gray-400 flex lg:flex-row flex-col items-center space-y-2 ">
                 <i class="fa-solid fa-user"></i>
-                  <span class="flex-1 ms-3 whitespace-nowrap">Monthly</span>
+                  <span class="flex-1 md:ms-3 ms-0 whitespace-nowrap">Monthly</span>
                   <div class="pt-5"><p>$10000</p></div>
                  </p>
               </div>
@@ -130,7 +130,7 @@
               <div class="flex flex-col items-center justify-center md:h-56 h-48  rounded bg-gray-50 dark:bg-gray-800 custumBorderGas">
                 <p class="text-2xl text-gray-400 flex lg:flex-row flex-col items-center space-y-2 ">
                     <i class="fa-solid fa-user"></i>
-                   <span class="flex-1 ms-3 whitespace-nowrap">Year to Date</span>
+                   <span class="flex-1 md:ms-3 ms-0 whitespace-nowrap">Year to Date</span>
                    <div class="pt-5"><p>$10000</p></div>
                   </p>
                </div>
@@ -140,18 +140,19 @@
            <div class="mb-4 rounded bg-gray-50">
 
             <h2 class="py-10 font-bold px-2 md:text-xl text-[12px] ">Employees Expense</h2>
-
-            <div class="wrapDailyExpense">
+            
+<!-- this div below control the whole section  -->
+            <div class="wrapDailyExpense text-center">
 
 <!-- mainbox wrap all 10 rows -->
 <div class="grid grid-cols-1 gap-4">
  <!-- title -->
- <div class="grid grid-cols-5 gap-2">
-   <div class="font-bold px-2 md:text-xl text-[12px]">Name</div>
-    <div class="font-bold px-2 md:text-xl text-[12px]">Day</div>
-    <div class="font-bold px-2 md:text-xl text-[12px]">Rates</div>
-    <div class="font-bold px-2 md:text-xl text-[12px]">Monthly</div>
-    <div class="font-bold px-2 md:text-xl text-[12px]">YTD</div>
+ <div class="grid grid-cols-5 gap-2 text-center">
+   <div class="font-bold px-2 md:text-lg text-[12px]">Name</div>
+    <div class="font-bold px-2 md:text-lg text-[12px]">Day</div>
+    <div class="font-bold px-2 md:text-lg text-[12px]">Rates</div>
+    <div class="font-bold px-2 md:text-lg text-[12px]">Monthly</div>
+    <div class="font-bold px-2 md:text-lg text-[12px]">YTD</div>
    </div>
 
 
