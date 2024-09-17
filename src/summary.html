@@ -1,0 +1,35 @@
+<!-- https://www.w3schools.com/js/js_graphics_chartjs.asp -->
+ <!-- chart from w3school we compare expense in last 3 years in graph bar -->
+
+ <!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+
+<canvas id="myChart" style="width:100%;max-width:400px"></canvas>
+
+<script>
+const xValues = ["2022", "2023", "2024"];
+const yValues = [80, 30, 40, 24, 15];
+const barColors = ["red", "green","blue"]
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Employees Expense"
+    }
+  }
+});
+</script>
+
+</body>
+</html>
