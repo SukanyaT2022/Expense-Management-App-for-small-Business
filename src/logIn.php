@@ -25,10 +25,11 @@ $conn = new mysqli($servername, $username, $password, "farmData");
 if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }
-
+//die make program stop
 //step3 run sql query
 $sql = 'select *from login';
 $result = $conn->query($sql);
+
 // for loop take each row if this username and passward found on the row
 //each value is $ row
 $found = false;
@@ -37,11 +38,14 @@ while($row = $result -> fetch_assoc()){
         // userName have to be the same as my admin oh php
         //if this email exist on the table on php or not
         //compare that the user type is the same as the table on php
-
-        // header("Location: index.html");
-
-        //header is function in javascript when you want to go one page to other page
-        echo("Login Successful!");
+if($row["userType"] == "admin"){
+    header("Location:../html/mainPage.html");
+    //header is function in javascript when you want to go one page to other page
+}else{
+    header("Location:../html/mainManager.html");
+}
+       
+        // echo("Login Successful!");
         $found = true;
         break;
     }
