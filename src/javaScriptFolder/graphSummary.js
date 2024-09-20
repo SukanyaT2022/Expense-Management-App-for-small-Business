@@ -109,3 +109,25 @@ new Chart("saleChart", {
     }
   }
 });
+
+// sale
+const yearNetprofitValues = ["2022", "2023", "2024"];
+const netProfitValues = [20, 50, 30, 24, 15];
+const netProfitbarColors = ["red", "green","blue"]
+new Chart("netProfitChart", {
+  type: "bar",
+  data: {
+    labels: yearNetprofitValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data:netProfitValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Net Profit"
+    }
+  }
+});
