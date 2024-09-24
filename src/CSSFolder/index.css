@@ -36,4 +36,6 @@ body {
 .wrapCustume{
 height: 300px;
 overflow-y: scroll;
+overflow-x: auto;
+min-width: 800px;
 }
