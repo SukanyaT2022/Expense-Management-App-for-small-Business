@@ -17,7 +17,7 @@ echo "Connected successfully";
 $usernameRequest = $_REQUEST["email"];
 $passwordRequest = $_REQUEST["password"];
 $userTypeRequest = $_REQUEST["userType"];
-
+echo($userTypeRequest);
 //step 3 insert add new item to database
 $sql = "INSERT INTO login
 VALUES ('$usernameRequest', '$passwordRequest', '$userTypeRequest')";
@@ -27,3 +27,4 @@ echo "New record created successfully";
 $conn->close();
 ?>
 <!-- echo in php is print or document.write -->
+

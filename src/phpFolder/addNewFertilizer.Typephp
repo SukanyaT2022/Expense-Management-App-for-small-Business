@@ -1,0 +1,62 @@
+<?php
+// step 1.1start connect - we need this line below for every php page to connect to database
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+// step 1.2Create connection to read from html
+$conn = new mysqli($servername, $username, $password, "farmData");
+//add "farmData" come from xammp - it's name of database completed folder
+
+// step 2.1Check connection
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+
+
+//step 2.2--this section need to change based wjat we get from html
+$fertilizerName = $_REQUEST['fertilizerName'];
+$description = $_REQUEST['description'];
+$supplierName = $_REQUEST['supplierName'];
+$orderDate = $_REQUEST['orderDate'];
+$fertilizerID = rand(10000,99999);
+$deliveryDate = $_REQUEST['deliveryDate'];
+$paymentStatus = $_REQUEST['paymentStatus'];
+$price = $_REQUEST['price'];
+$qty = $_REQUEST['qty'];
+$total = $_REQUEST['total'];
+$paymentDate = $_REQUEST['paymentDate'];
+//randum number for id
+
+
+// step 3
+//step 3 insert add new item to database
+//fertilizer master folder
+$sql = "INSERT INTO Fertilizer_master VALUES ($fertilizerID, '$fertilizerName','$supplierName','$description')";
+//supplier orange color is the same of the file table in mysql
+// $supplierID no qutation coz result is number
+// and 'supplierName' coz nzme is letter not numner for result
+$conn->query($sql);
+
+//fertilizer stock
+$sql = "INSERT INTO Fertilizer_Stock VALUES ($fertilizerID, $qty)";
+//supplier orange color is the same of the file table in mysql
+// $supplierID no qutation coz result is number
+// and 'supplierName' coz nzme is letter not numner for result
+$conn->query($sql);
+
+//fertilizer orderFolder
+$sql = "INSERT INTO FertilizerOrder VALUES ($fertilizerID,'$orderDate',$qty,'$deliveryDate',$price,'$paymentDate','$paymentStatus')";
+//supplier orange color is the same of the file table in mysql
+// $supplierID no qutation coz result is number
+// and 'supplierName' coz nzme is letter not numner for result
+echo $sql;
+$conn->query($sql);
+
+
+
+
+echo $sql;
+echo "New record created successfully";
+$conn->close();
+?>
